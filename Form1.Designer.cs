@@ -93,6 +93,7 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
+            AcceptButton = button1;
             ResumeLayout(false);
             PerformLayout();
         }
