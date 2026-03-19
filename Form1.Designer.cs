@@ -34,6 +34,9 @@
             EchoMessenger = new ListBox();
             textBox1 = new TextBox();
             button1 = new Button();
+            labelStatus = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
+            labelCount = new Label();
             SuspendLayout();
             // 
             // label1
@@ -81,8 +84,37 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // labelStatus
+            // 
+            labelStatus.AutoSize = true;
+            labelStatus.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            labelStatus.ForeColor = Color.Black;
+            labelStatus.Location = new Point(83, 420);
+            labelStatus.Name = "labelStatus";
+            labelStatus.Size = new Size(150, 21);
+            labelStatus.TabIndex = 9;
+            labelStatus.Text = "현재대화:";
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 500;
+            timer1.Tick += timer1_Tick;
+            // 
+            // labelCount
+            // 
+            labelCount.AutoSize = true;
+            labelCount.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            labelCount.ForeColor = Color.Black;
+            labelCount.Location = new Point(720, 420);
+            labelCount.Name = "labelCount";
+            labelCount.Size = new Size(50, 21);
+            labelCount.TabIndex = 10;
+            labelCount.Text = "0개";
+            // 
             // Form1
             // 
+            AcceptButton = button1;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Info;
@@ -91,9 +123,10 @@
             Controls.Add(textBox1);
             Controls.Add(EchoMessenger);
             Controls.Add(label1);
+            Controls.Add(labelStatus);
+            Controls.Add(labelCount);
             Name = "Form1";
             Text = "Form1";
-            AcceptButton = button1;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -105,5 +138,8 @@
         private ListBox EchoMessenger;
         private TextBox textBox1;
         private Button button1;
+        private Label labelStatus;
+        private Label labelCount;
+        private System.Windows.Forms.Timer timer1;
     }
 }
