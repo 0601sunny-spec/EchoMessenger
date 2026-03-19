@@ -70,6 +70,7 @@
             textBox1.Location = new Point(83, 383);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(484, 23);
+            textBox1.MaxLength = 50;
             textBox1.TabIndex = 6;
             // 
             // button1
@@ -83,6 +84,32 @@
             button1.Text = "전송";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
+            // 
+            // buttonDelete
+            // 
+            buttonDelete = new Button();
+            buttonDelete.BackColor = Color.FromArgb(255, 192, 192);
+            buttonDelete.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            buttonDelete.Location = new Point(710, 370);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(75, 46);
+            buttonDelete.TabIndex = 11;
+            buttonDelete.Text = "삭제";
+            buttonDelete.UseVisualStyleBackColor = false;
+            buttonDelete.Click += buttonDelete_Click;
+            // 
+            // buttonClearAll
+            // 
+            buttonClearAll = new Button();
+            buttonClearAll.BackColor = Color.FromArgb(192, 192, 255);
+            buttonClearAll.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            buttonClearAll.Location = new Point(492, 415);
+            buttonClearAll.Name = "buttonClearAll";
+            buttonClearAll.Size = new Size(150, 30);
+            buttonClearAll.TabIndex = 12;
+            buttonClearAll.Text = "대화기록삭제";
+            buttonClearAll.UseVisualStyleBackColor = false;
+            buttonClearAll.Click += buttonClearAll_Click;
             // 
             // labelStatus
             // 
@@ -125,6 +152,8 @@
             Controls.Add(label1);
             Controls.Add(labelStatus);
             Controls.Add(labelCount);
+            Controls.Add(buttonDelete);
+            Controls.Add(buttonClearAll);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -141,5 +170,7 @@
         private Label labelStatus;
         private Label labelCount;
         private System.Windows.Forms.Timer timer1;
+        private Button buttonDelete;
+        private Button buttonClearAll;
     }
 }
