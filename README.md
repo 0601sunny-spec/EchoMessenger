@@ -1,5 +1,26 @@
-# (C# 코딩) 에코메신저## 개요
+# (C# 코딩) 에코메신저
+
+## 개요
 -C# 프로그래밍학습
+
+-1줄소개: 사용자키보드입력을받아서처리하는프로그램
+
+-사용한플랫폼: 
+-C#, .NET Windows Forms, Visual Studio, GitHub
+
+-사용한컨트롤:
+-Label, TextBox, ListBox, Button
+-사용한기술과구현한기능:
+-Visual Studio를 이용하여UI 디자인
+-string 클래스를 이용한 사용자 입력데이터처리
+-DateTime클래스를 이용한 현재 시간 정보구하기
+
+
+-수업중에 배우고 사용했던 클래스들 관련된 설명:
+-textbox를 통해 입력해서 위로 똑같이 출력하는 것을 배우게 되었다
+
+-실습중에구현한기능들:TextBox에 입력된 문자를 listBox에 추가하는 기능, textBox에 입력된 문자를 listBox에서 삭제하는기능, textBox에 입력된 문자를 listBox에서수정하는기능,좌클릭 혹은 엔터를 통해서 textbox에 입력된 문자를 listbox에 올림
+
 
 -핵심기능: TextBox에 입력된 문자를 listBox에 추가하는 기능, textBox에 입력된 문자를 listBox에서 삭제하는기능, textBox에 입력된 문자를 listBox에서수정하는기능,좌클릭 혹은 엔터를 통해서 textbox에 입력된 문자를 listbox에 올림
 

@@ -10,18 +10,18 @@ namespace EchoMessenger
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            var message = textBox1.Text?.Trim();
+            var message = txtPassword.Text?.Trim();
             if (!string.IsNullOrEmpty(message))
             {
                 if (message.Length > 50)
                 {
                     MessageBox.Show("메시지는 최대 50자까지 입력할 수 있습니다.", "경고", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    textBox1.Focus();
+                    txtPassword.Focus();
                     return;
                 }
                 EchoMessenger.Items.Add($"[{System.DateTime.Now:HH:mm:ss}] {message}");
-                textBox1.Clear();
-                textBox1.Focus();
+                txtPassword.Clear();
+                txtPassword.Focus();
                 UpdateStatus();
             }
         }

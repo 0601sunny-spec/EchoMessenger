@@ -32,11 +32,13 @@
             label1 = new Label();
             contextMenuStrip1 = new ContextMenuStrip(components);
             EchoMessenger = new ListBox();
-            textBox1 = new TextBox();
-            button1 = new Button();
+            txtPassword = new TextBox();
+            btnSaved = new Button();
             labelStatus = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             labelCount = new Label();
+            button2 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -65,51 +67,25 @@
             EchoMessenger.Size = new Size(622, 279);
             EchoMessenger.TabIndex = 5;
             // 
-            // textBox1
+            // txtPassword
             // 
-            textBox1.Location = new Point(83, 383);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(484, 23);
-            textBox1.MaxLength = 50;
-            textBox1.TabIndex = 6;
+            txtPassword.Location = new Point(83, 383);
+            txtPassword.MaxLength = 50;
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(484, 23);
+            txtPassword.TabIndex = 6;
             // 
-            // button1
+            // btnSaved
             // 
-            button1.BackColor = Color.FromArgb(128, 255, 128);
-            button1.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            button1.Location = new Point(596, 370);
-            button1.Name = "button1";
-            button1.Size = new Size(109, 46);
-            button1.TabIndex = 8;
-            button1.Text = "전송";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // buttonDelete
-            // 
-            buttonDelete = new Button();
-            buttonDelete.BackColor = Color.FromArgb(255, 192, 192);
-            buttonDelete.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            buttonDelete.Location = new Point(710, 370);
-            buttonDelete.Name = "buttonDelete";
-            buttonDelete.Size = new Size(75, 46);
-            buttonDelete.TabIndex = 11;
-            buttonDelete.Text = "삭제";
-            buttonDelete.UseVisualStyleBackColor = false;
-            buttonDelete.Click += buttonDelete_Click;
-            // 
-            // buttonClearAll
-            // 
-            buttonClearAll = new Button();
-            buttonClearAll.BackColor = Color.FromArgb(192, 192, 255);
-            buttonClearAll.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            buttonClearAll.Location = new Point(492, 415);
-            buttonClearAll.Name = "buttonClearAll";
-            buttonClearAll.Size = new Size(150, 30);
-            buttonClearAll.TabIndex = 12;
-            buttonClearAll.Text = "대화기록삭제";
-            buttonClearAll.UseVisualStyleBackColor = false;
-            buttonClearAll.Click += buttonClearAll_Click;
+            btnSaved.BackColor = Color.FromArgb(128, 255, 128);
+            btnSaved.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnSaved.Location = new Point(596, 370);
+            btnSaved.Name = "btnSaved";
+            btnSaved.Size = new Size(109, 46);
+            btnSaved.TabIndex = 8;
+            btnSaved.Text = "전송";
+            btnSaved.UseVisualStyleBackColor = false;
+            btnSaved.Click += button1_Click;
             // 
             // labelStatus
             // 
@@ -118,7 +94,7 @@
             labelStatus.ForeColor = Color.Black;
             labelStatus.Location = new Point(83, 420);
             labelStatus.Name = "labelStatus";
-            labelStatus.Size = new Size(150, 21);
+            labelStatus.Size = new Size(78, 21);
             labelStatus.TabIndex = 9;
             labelStatus.Text = "현재대화:";
             // 
@@ -135,25 +111,49 @@
             labelCount.ForeColor = Color.Black;
             labelCount.Location = new Point(720, 420);
             labelCount.Name = "labelCount";
-            labelCount.Size = new Size(50, 21);
+            labelCount.Size = new Size(35, 21);
             labelCount.TabIndex = 10;
             labelCount.Text = "0개";
             // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(255, 192, 192);
+            button2.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button2.Location = new Point(710, 370);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 46);
+            button2.TabIndex = 11;
+            button2.Text = "삭제";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += buttonDelete_Click;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(192, 192, 255);
+            button3.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button3.Location = new Point(492, 415);
+            button3.Name = "button3";
+            button3.Size = new Size(150, 30);
+            button3.TabIndex = 12;
+            button3.Text = "대화기록삭제";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += buttonClearAll_Click;
+            // 
             // Form1
             // 
-            AcceptButton = button1;
+            AcceptButton = btnSaved;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Info;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
+            Controls.Add(btnSaved);
+            Controls.Add(txtPassword);
             Controls.Add(EchoMessenger);
             Controls.Add(label1);
             Controls.Add(labelStatus);
             Controls.Add(labelCount);
-            Controls.Add(buttonDelete);
-            Controls.Add(buttonClearAll);
+            Controls.Add(button2);
+            Controls.Add(button3);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -165,12 +165,12 @@
         private Label label1;
         private ContextMenuStrip contextMenuStrip1;
         private ListBox EchoMessenger;
-        private TextBox textBox1;
-        private Button button1;
+        private TextBox txtPassword;
+        private Button btnSaved;
         private Label labelStatus;
         private Label labelCount;
         private System.Windows.Forms.Timer timer1;
-        private Button buttonDelete;
-        private Button buttonClearAll;
+        private Button button2;
+        private Button button3;
     }
 }
